@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raul — Pizza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+
+      <!-- window dots -->
+      <div class="dots">
+        <span style="background:#F0625A"></span>
+        <span style="background:#F6BE3F"></span>
+        <span style="background:#42C461"></span>
+      </div>
+
+      <!-- header -->
+      <header class="header">
+        
+        <div class="logo">Ra<span>ul</span></div>
+
+        <div class="nav_menu_btn" id="menuBtn"><i class="bi bi-list"></i></div>
+
+        <nav class="nav" id="nav">
+          <a href="#home">Acasă</a>
+          <a href="#menu">Meniu</a>
+          <a href="#reviews">Recenzii</a>
+          <a href="#contact">Contact</a>  
+        </nav>
+        <div class="actions">
+          <button class="cart-btn" aria-label="Coș">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.5 3h2l2.6 12.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6l1.6-7.4H5.6"/></svg>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+          <button class="btn btn-primary">Cont nou</button>
+        </div>
+      </header>
+
+      <!-- hero -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Nu e doar pizza,<br>e o<br>sărbătoare.</h1>
+          <p>Crusta crocantă, mozzarella fină și ingrediente proaspete coapte pe vatră — fiecare felie, o sărbătoare.</p>
+          <div class="hero-buttons">
+           <a href="#menu"><button class="btn btn-primary btn-lg">Vezi meniul</button> </a> 
+
+            <button class="btn btn-ghost btn-lg">Rezervă o masă</button>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <div class="glow"></div>
+          <div class="dish-circle hero-dish">
+            <img src="pizza/hero.jpg" alt="Pizza" onerror="this.parentElement.classList.add('empty')">
+            <span class="ph-label">pizza</span>
+          </div>
+          <div class="badge">
+            <div>
+              <div class="badge-num">5%</div>
+              <div class="badge-sub"><b>Reducere</b> la 2 comenzi</div>
+            </div>
+            <div class="badge-icon">%</div>
+          </div>
+
+          <div class="leaf leaf-1"></div>
+          <div class="leaf leaf-2"></div>
+          <div class="leaf leaf-3"></div>
+        </div>
+      </section>
+
+      <!-- menu -->
+      <section class="menu" id="menu">
+        <div class="menu-row" id="menuRow">
+          <article class="dish-card" data-category="clasice">
+            <div class="dish-circle"><img src="pizza/margherita.jpg" alt="Margherita" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Margherita</h3>
+            <p>Busuioc proaspăt</p>
+            <div class="price">42 lei</div>
+          </article >
+
+          <article class="dish-card" data-category="clasice">
+            <div class="dish-circle"><img src="pizza/peperoni.jpg" alt="Pepperoni" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Pepperoni</h3>
+            <p>Extra picantă</p>
+            <div class="price">48 lei</div>
+          </article>
+
+          <article class="dish-card" data-category="clasice">
+            <div class="dish-circle"><img src="pizza/quattro formagi.jpg" alt="Quattro Formaggi" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Quattro Formaggi</h3>
+            <p>Patru brânzeturi</p>
+            <div class="price">52 lei</div>
+          </article>
+
+          <article class="dish-card" data-category="clasice">
+            <div class="dish-circle"><img src="pizza/quattro stagioni.png" alt="Diavola" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Quattro Stagioni</h3>
+            <p>Patru anotimpuri</p>
+            <div class="price">50 lei</div>
+          </article>
+
+
+           <article class="dish-card" data-category="vegetariana">
+            <div class="dish-circle"><img src="pizza/vegetariana.jpg" alt="Diavola" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Vegetariana</h3>
+            <p>Legume proaspete</p>
+            <div class="price">46 lei</div>
+          </article>
+
+
+           <article class="dish-card" data-category="clasice">
+            <div class="dish-circle"><img src="pizza/prosciuto efunghi.png" alt="Diavola" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Prosciutto e Funghi</h3>
+            <p>Șuncă și ciuperci</p>
+            <div class="price">50 lei</div>
+          </article>
+
+           <article class="dish-card" data-category="clasice">
+            <div class="dish-circle"><img src="pizza/capricciosa.png" alt="Diavola" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Capricciosa</h3>
+            <p>Asortată</p>
+            <div class="price">52 lei</div>
+          </article>
+
+           <article class="dish-card" data-category="vegetariana">
+            <div class="dish-circle"><img src="pizza/hawaiian.jpg" alt="Diavola" onerror="this.parentElement.classList.add('empty')"><span class="ph-label">pizza</span></div>
+            <button class="add-btn" aria-label="Adaugă">+</button>
+            <h3>Hawaiian</h3>
+            <p>Șuncă și ananas</p>
+            <div class="price">46 lei</div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+<div class="reviews-wrap" >
+  <button class="rev-btn rev-prev" aria-label="Înapoi">←</button>
+  <section class="reviews" id="reviews">
+      <div class="crd">
+
+        
+        <div class="review-author">
+          <img src="review photo/1.jpg">
+          <p>Andrei M.</p>
+        </div>
+
+        <div class="review-com">
+          Cea mai bună pizza din Craiova, fără discuție. Crusta crocantă pe margine și pufoasă la mijloc, exact cum trebuie. Am devenit client fix.
+        </div>
+
+        <div class="review-star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        
+        
+
+      </div>
+      
+
+      <div class="crd">
+
+        
+        <div class="review-author">
+          <img src="review photo/2.jpg">
+          <p>Ioana D.</p>
+        </div>
+
+        <div class="review-com">
+          Am comandat pentru o seară cu prietenii și toată lumea a fost impresionată. Ingrediente proaspete, porții generoase și a ajuns încă caldă. Recomand cu drag!
+        </div>
+
+        <div class="review-star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+        
+        
+
+      </div>
+
+
+      <div class="crd">
+
+        
+        <div class="review-author">
+          <img src="review photo/3.jpg">
+          <p>Vlad P.</p>
+        </div>
+
+        <div class="review-com">
+          Pizza excelentă, mozzarella de calitate și blat subțire. A durat un pic livrarea într-o seară aglomerată, dar a meritat fiecare minut de așteptat.
+        </div>
+
+        <div class="review-star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star"></i>
+        </div>
+        
+        
+
+      </div>
+
+      <div class="crd">
+
+        
+        <div class="review-author">
+          <img src="review photo/4.jpg">
+          <p>Elena R.</p>
+        </div>
+
+        <div class="review-com">
+          Atmosferă super plăcută în local, personal prietenos și prețuri corecte pentru calitatea asta. Quattro Formaggi e preferata mea, o iau de fiecare dată.
+        </div>
+
+        <div class="review-star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        
+        
+
+      </div>
+
+
+      <div class="crd">
+
+        
+        <div class="review-author">
+          <img src="review photo/6.jpg">
+          <p>Cristian T.</p>
+        </div>
+
+        <div class="review-com">
+          Raportul calitate-preț e cel mai bun din oraș. Mănânc aici de luni de zile și niciodată n-am fost dezamăgit. Pizza la vatră se simte în fiecare felie.
+        </div>
+
+        <div class="review-star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        
+        
+
+      </div>
+
+
+      <div class="crd">
+
+        
+        <div class="review-author">
+          <img src="review photo/5.jpg">
+          <p>Maria G.</p>
+        </div>
+
+        <div class="review-com">
+          Comand de fiecare dată când am chef de ceva bun. Livrare rapidă, pizza mereu caldă și gustoasă. O recomand tuturor din Craiova!
+        </div>
+
+        <div class="review-star">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+        </div>
+        
+        
+
+      </div>
+  </section>
+  <button class="rev-btn rev-next" aria-label="Înainte">→</button>
+</div>
+
+
+<section class="footer" id="contact">
+  <div class="footer-content">
+  <div class="socials">
+    <h1>Ra<span>ul</span></h1>
+      <p>Pizza la vatră, cu ingrediente proaspete și pasiune, în inima Craiovei.</p>
+      <div class="socials-links">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-tiktok"></i>
+        
+      </div>
+  </div>
+  <div class="program">
+    <h4>Program</h4>
+    <div class="program-content">
+    <p>Luni – Vineri <span>10 – 23</span></p>
+    <p>Sâmbătă <span>11 – 24</span></p>
+    <p>Duminică <span>12 – 22</span></p>
+    </div>
+  </div>
+
+  <div class="contact">
+    <h4>Contact</h4>
+    
+    <div class="contact-item">
+    <i class="bi bi-geo-alt-fill"></i>
+    <span>Str. Unirii 25, Craiova</span>
+  </div>  
+
+    <div class="contact-item">
+    <i class="bi bi-telephone"></i>
+    <span>0770 123 456</span>
+    </div>
+    
+    <div class="contact-item">
+    <i class="bi bi-envelope"></i>
+    <span>contact@raulpizza.ro</span>
+    </div>
+
+    
+  </div>
+
+  </div>
+ 
+</section>
+ <div class="cart-overlay" id="cartOverlay"></div>
+
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-head">
+    <h3>Coșul tău</h3>
+    <button class="cart-close" id="cartClose">&times;</button>
+  </div>
+
+  <div class="cart-items" id="cartItems">
+    <!-- liniile se pun din JS -->
+  </div>
+
+  <div class="cart-foot">
+    <div class="cart-total">Total: <span id="cartTotal">0</span> lei</div>
+    <button class="btn btn-primary" style="width:100%">Comandă</button>
+  </div>
+</aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
